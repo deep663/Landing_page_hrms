@@ -41,28 +41,28 @@ const Main = () => {
             <div className="bg-gray-200 flex flex-wrap justify-evenly items-center py-2 mb-8 space-y-4 sm:space-y-0 sm:space-x-4">
                 <div className='flex items-center space-x-2'>
                     <label className="block mb-1 text-gray-600 font-medium">DISTRICTS:</label>
-                    <select className="bg-white border border-gray-300 text-gray-700 px-4 py-2 rounded shadow">
+                    <select className="bg-white border-2 border-blue-300 text-gray-700 px-4 py-2 rounded-full shadow hover:shadow-lg hover:scale-105 transition-transform duration-300 ease-in-out">
                         <option>ALL DISTRICTS</option>
                         {/* Add more district options here */}
                     </select>
                 </div>
                 <div className='flex items-center space-x-2'>
                     <label className="block mb-1 text-gray-600 font-medium">BLOCKS:</label>
-                    <select className="bg-white border border-gray-300 text-gray-700 px-4 py-2 rounded shadow">
+                    <select className="bg-white border-2 border-blue-300 text-gray-700 px-4 py-2 rounded-full shadow hover:shadow-lg hover:scale-105 transition-transform duration-300 ease-in-out">
                         <option>ALL BLOCKS</option>
                         {/* Add more block options here */}
                     </select>
                 </div>
                 <div className='flex items-center space-x-2'>
                     <label className="block mb-1 text-gray-600 font-medium">GPs:</label>
-                    <select className="bg-white border border-gray-300 text-gray-700 px-4 py-2 rounded shadow">
+                    <select className="bg-white border-2 border-blue-300 text-gray-700 px-4 py-2 rounded-full shadow hover:shadow-lg hover:scale-105 transition-transform duration-300 ease-in-out">
                         <option>ALL GPs</option>
                         {/* Add more GP options here */}
                     </select>
                 </div>
                 <div className='flex items-center space-x-2'>
                     <label className="block mb-1 text-gray-600 font-medium">DESIGNATIONS:</label>
-                    <select className="bg-white border border-gray-300 text-gray-700 px-4 py-2 rounded shadow">
+                    <select className="bg-white border-2 border-blue-300 text-gray-700 px-4 py-2 rounded-full shadow hover:shadow-lg hover:scale-105 transition-transform duration-300 ease-in-out">
                         <option>ALL DESIGNATIONS</option>
                         {/* Add more designation options here */}
                     </select>

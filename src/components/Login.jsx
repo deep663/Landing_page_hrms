@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-const UserLoginForm = (onClose) => {
+const UserLoginForm = ({ onClose }) => {
     const [role, setRole] = useState('');
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
@@ -23,8 +23,8 @@ const UserLoginForm = (onClose) => {
     };
 
     return (
-        <>
-            <div className="flex flex-col max-w-sm rounded-md overflow-hidden bg-gray-100">
+        <div className="fixed inset-0 flex items-center justify-center bg-gray-900 bg-opacity-50 z-50">
+            <div className="flex flex-col max-w-sm w-full rounded-md overflow-hidden bg-gray-100 shadow-lg">
                 <div onClick={onClose} className="relative flex justify-end p-4 bg-blue-500 text-white font-bold cursor-pointer">
                     X
                 </div>
@@ -126,7 +126,7 @@ const UserLoginForm = (onClose) => {
                     </form>
                 </div>
             </div>
-        </>
+        </div>
     );
 };
 
