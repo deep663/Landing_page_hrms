@@ -1,5 +1,5 @@
 const Card = ({ title, total, inService, imgSrc }) => (
-    <div className="card p-6 text-center border-2 border-blue-300 rounded-lg bg-white shadow-md hover:shadow-lg hover:scale-105 transition-transform duration-300 ease-in-out">
+    <div className="card p-6 text-center border-2 border-blue-300 rounded-lg bg-white shadow-md hover:shadow-lg hover:scale-105 hover:border-blue-500 transition-transform duration-300 ease-in-out">
         <img
             alt={`${title} Logo`}
             className="mx-auto mb-4"

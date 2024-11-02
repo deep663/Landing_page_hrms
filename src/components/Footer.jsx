@@ -6,7 +6,7 @@ const Footer = () => (
             <div className="flex items-center mb-4 md:mb-0">
                 <div>
                     <h2 className="text-3xl font-bold">HRMS</h2>
-                    <p className="text-base">Panchayat & Rural Development Department, Assam</p>
+                    <p className="text-base">Panchayat & Rural Development, Assam</p>
                 </div>
             </div>
             <div className="flex items-center text-base mb-4 md:mb-0">
@@ -32,7 +32,7 @@ const Footer = () => (
         <div className="flex flex-col md:flex-row justify-between items-center mt-4 border-t border-gray-200 pt-4">
             <ul className="flex space-x-8 mb-4 md:mb-0 text-base">
                 <li><a className="hover:underline transition duration-300" href="#">HOME</a></li>
-                <li><a className="hover:underline transition duration-300" href="#">About Us</a></li>
+                <li><a className="hover:underline transition duration-300" href="#">ABOUT US</a></li>
                 <li><a className="hover:underline transition duration-300" href="#">FAQ</a></li>
             </ul>
             <div className="flex space-x-4 mb-4 md:mb-0">

@@ -1,7 +1,7 @@
 import { FaHandsHelping, FaBuilding, FaHome, FaPeopleArrows, FaBroom, FaUsers } from 'react-icons/fa';
 
 const AboutUs = () => (
-    <div className="about-us bg-white p-6 rounded-lg shadow-md border-l-4 border-blue-500">
+    <div id='about' className="about-us bg-white p-6 rounded-lg shadow-md border-l-4 border-blue-500">
         <h2 className="text-blue-500 font-semibold text-2xl mb-4">About Us</h2>
         <p className="text-gray-700 mb-4">
             The Panchayat & Rural Development Department largely works to enhance livelihood opportunities...

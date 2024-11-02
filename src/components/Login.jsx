@@ -24,17 +24,18 @@ const UserLoginForm = ({ onClose }) => {
 
     return (
         <div className="fixed inset-0 flex items-center justify-center bg-gray-900 bg-opacity-50 z-50">
-            <div className="flex flex-col max-w-sm w-full rounded-md overflow-hidden bg-gray-100 shadow-lg">
-                <div onClick={onClose} className="relative flex justify-end p-4 bg-blue-500 text-white font-bold cursor-pointer">
+            <div className="flex flex-col max-w-sm p-4 w-full rounded-md overflow-hidden bg-gray-200 shadow-lg">
+                <div onClick={onClose} className="relative flex justify-end pr-2 bg-blue-500 text-white font-bold cursor-pointer">
                     X
                 </div>
                 <div className='flex flex-col items-center justify-center bg-blue-500'>
                     <img src="./src/assets/emblem-yellow.png" alt="Emblem" />
-                    <h1 className="text-3xl text-white font-bold mb-4">HRMS</h1>
+                    <h1 className="text-3xl text-white font-bold">HRMS</h1>
+                    <p className="text-white text-center mb-4">Panchayat & Rural Development Department, Assam</p>
                 </div>
                 <div className="flex items-center">
                     <form
-                        className="w-full p-6 bg-gray-100 shadow-md rounded-lg space-y-4"
+                        className="w-full p-6 bg-gray-100 shadow-md space-y-4"
                         onSubmit={handleSubmit}
                     >
                         <label htmlFor="role" className="block text-gray-700">Select Role:</label>
