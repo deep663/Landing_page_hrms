@@ -1,7 +1,6 @@
 import { useState } from 'react';
-import { FaHome, FaInfoCircle, FaPhoneAlt, FaQuestionCircle, FaBars, FaTimes, FaArrowRight } from 'react-icons/fa';
+import { FaHome, FaInfoCircle, FaPhoneAlt, FaQuestionCircle, FaBars, FaTimes } from 'react-icons/fa';
 import UserLoginForm from './Login';
-import '../css/Nav.css'; // Make sure to import your CSS file
 
 const Nav = () => {
     const [activeItem, setActiveItem] = useState('HOME');
@@ -45,28 +44,19 @@ const Nav = () => {
                 </ul>
 
                 {/* Mobile Menu Icon */}
-                <div className="w-full flex justify-between md:hidden">
+                <div className="md:hidden">
                     <button onClick={toggleMenu} className="text-blue-600">
                         {menuOpen ? <FaTimes size={24} /> : <FaBars size={24} />}
                     </button>
-                    <button
-                        onClick={toggleModal}
-                        className="text-blue-600 border border-blue-600 my-auto px-6 py-2 rounded-full hover:bg-blue-600 hover:text-white transition-colors duration-300 mt-4"
-                    >
-                        Log In
-                    </button>
                 </div>
 
-                {/* Log In Button with Animated Icon */}
-                <div className="relative">
-                    <button
-                        onClick={toggleModal}
-                        className="hidden md:inline-block text-white border border-blue-600 px-6 py-2 rounded-full shadow-md bg-blue-500 hover:bg-white hover:text-blue-500 transition-colors duration-300"
-                    >
-                        LOG IN
-                    </button>
-                    {/* <FaArrowRight className="absolute right-10 top-1/2 transform -translate-y-1/2 animate-bounce hidden md:block" /> */}
-                </div>
+                {/* Log In Button */}
+                <button
+                    onClick={toggleModal}
+                    className="hidden md:inline-block text-white font-bold border border-green-600 px-6 py-2 rounded-full shadow-md bg-green-500 hover:bg-white hover:text-green-500 transition-colors duration-300"
+                >
+                    LOG IN
+                </button>
             </nav>
 
             {/* Mobile Menu */}
@@ -95,7 +85,12 @@ const Nav = () => {
                             </a>
                         </li>
                     ))}
-                    
+                    <button
+                        onClick={toggleModal}
+                        className="text-white border border-green-600 px-6 py-2 rounded-full bg-green-500 hover:bg-green-600 hover:text-white transition-colors duration-300 mt-4"
+                    >
+                        Log In
+                    </button>
                 </ul>
             )}
 
