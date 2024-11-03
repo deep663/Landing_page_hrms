@@ -1,11 +1,13 @@
 import { useState } from 'react';
-
+import { useNavigate } from 'react-router-dom';
 const UserLoginForm = ({ onClose }) => {
     const [role, setRole] = useState('');
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
     const [mobile, setMobile] = useState('');
     const [otp, setOtp] = useState('');
+
+    const navigate = useNavigate();
 
     const handleRoleChange = (event) => {
         setRole(event.target.value);
@@ -18,6 +20,16 @@ const UserLoginForm = ({ onClose }) => {
 
     const handleSubmit = (event) => {
         event.preventDefault();
+
+        if (role === 'Super Admin') {
+            if (username === 'admin' && password === 'Admin@123') {
+                alert("Login successful!");
+                navigate('/admindashboard');
+                onClose();
+            } else {
+                alert("Invalid username or password!");
+            }
+        }
         // Implement form submission logic here
         console.log('Form submitted:', { role, username, password, mobile, otp });
     };
