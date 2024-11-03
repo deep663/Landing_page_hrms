@@ -6,10 +6,10 @@ import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
 
 const Hero = () => {
     const images = [
-        "./src/assets/slide_image_1.jpg",
-        "./src/assets/slide_image_2.jpg",
-        "./src/assets/slide_image_3.jpg",
-        "./src/assets/slide_image_4.jpg",
+        "./slide_image_1.jpg",
+        "./slide_image_2.jpg",
+        "./slide_image_3.jpg",
+        "./slide_image_4.jpg",
     ];
 
     const captions = [
@@ -149,12 +149,12 @@ const Hero = () => {
 
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
-                <Card title="MGNREGA" total="6565" inService="5720" imgSrc="./src/assets/MGNREGA.webp" />
-                <Card title="PMAYG" total="370" inService="240" imgSrc="./src/assets/pmay-g-logo.png" />
-                <Card title="14th FINANCE COMMISSION" total="6565" inService="5720" imgSrc="./src/assets/FC.webp" />
-                <Card title="RGSA" total="62" inService="46" imgSrc="./src/assets/RGSA.jfif" />
-                <Card title="NSAP" total="2" inService="0" imgSrc="./src/assets/NSAP.png" />
-                <Card title="RURBAN" total="15" inService="8" imgSrc="./src/assets/RURBAN.jfif" />
+                <Card title="MGNREGA" total="6565" inService="5720" imgSrc="./MGNREGA.webp" />
+                <Card title="PMAYG" total="370" inService="240" imgSrc="./pmay-g-logo.png" />
+                <Card title="14th FINANCE COMMISSION" total="6565" inService="5720" imgSrc="./FC.webp" />
+                <Card title="RGSA" total="62" inService="46" imgSrc="./RGSA.jfif" />
+                <Card title="NSAP" total="2" inService="0" imgSrc="./NSAP.png" />
+                <Card title="RURBAN" total="15" inService="8" imgSrc="./RURBAN.jfif" />
                 <Card title="SOCIAL ASSISTANT" total="12" inService="7" imgSrc="https://storage.googleapis.com/a1aa/image/eklfHD4FgntgkkjInSlgrzfh0rWbZFycr44tgP2cOJEd6ZWnA.jpg" />
             </div>
 
