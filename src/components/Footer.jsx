@@ -15,7 +15,7 @@ const Footer = () => (
                         <FaEnvelope className="mr-2" /> {/* Email Icon */}
                         <p className="font-semibold">Email</p>
                     </div>
-                    <p className="hover:underline cursor-pointer">example@gmail.com</p>
+                    <p className="hover:underline cursor-pointer">pnrdhcms@gmail.com</p>
                 </div>
             </div>
             <div className="flex items-center text-base">
@@ -24,7 +24,7 @@ const Footer = () => (
                         <FaPhoneAlt className="mr-2" /> {/* Phone Icon */}
                         <p className="font-semibold">Contact Numbers</p>
                     </div>
-                    <p>123-456-7890</p>
+                    <p>18001233230</p>
                     <p>098-765-4321</p>
                 </div>
             </div>

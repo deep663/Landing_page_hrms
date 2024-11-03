@@ -9,11 +9,11 @@ const ContactUs = () => {
                     <h3 className="text-xl font-semibold mb-4">Get in Touch</h3>
                     <p className="flex items-center mb-2">
                         <FaEnvelope className="mr-2" />
-                        <span>Email: <a href="mailto:example@gmail.com" className="hover:underline">example@gmail.com</a></span>
+                        <span>Email: <a href="mailto:example@gmail.com" className="hover:underline">pnrdhcms@gmail.com</a></span>
                     </p>
                     <p className="flex items-center mb-2">
                         <FaPhoneAlt className="mr-2" />
-                        <span>Phone: <a href="tel:+1234567890" className="hover:underline">123-456-7890</a></span>
+                        <span>Phone: <a href="tel:+1234567890" className="hover:underline">18001233230</a></span>
                     </p>
                     <p className="flex items-center mb-2">
                         <FaPhoneAlt className="mr-2" />
