@@ -3,7 +3,7 @@ import { FaEnvelope, FaPhoneAlt } from 'react-icons/fa';
 const ContactUs = () => {
     return (
         <div id='contact' className="bg-gray-100 p-8 rounded-lg shadow-md">
-            <h2 className="text-2xl font-bold mb-6 text-center">Contact Us</h2>
+            <h2 className="text-2xl text-blue-600 font-bold mb-6 text-center">Contact Us</h2>
             <div className="flex flex-col md:flex-row justify-between mb-6">
                 <div className="w-full md:w-1/2 mb-4 md:mb-0">
                     <h3 className="text-xl font-semibold mb-4">Get in Touch</h3>

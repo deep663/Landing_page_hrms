@@ -1,7 +1,7 @@
 import { FaEnvelope, FaPhoneAlt, FaFacebook, FaTwitter, FaLinkedin } from 'react-icons/fa';
 
 const Footer = () => (
-    <footer className="footer p-8 mt-8 bg-gradient-to-b from-blue-600 to-blue-900 text-white">
+    <footer className="footer p-8 bg-gradient-to-b from-blue-600 to-blue-900 text-white">
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-6">
             <div className="flex items-center mb-4 md:mb-0">
                 <div>
