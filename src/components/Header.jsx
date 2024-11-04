@@ -3,7 +3,7 @@ const Header = () => {
     const navigate = useNavigate();
     return (
         <header className="header p-4 flex max-w-full justify-between items-center border-b border-gray-200">
-            <div onClick={() => navigate("/")} className="flex items-center">
+            <div onClick={() => navigate("/")} className="flex items-center cursor-pointer">
                 <img alt="Government Logo" className="mr-2 h-14 md:h-20" src="./emblem-dark.png" />
                 <div>
                     <h1 className="text-md md:text-3xl font-bold">HRMS</h1>
