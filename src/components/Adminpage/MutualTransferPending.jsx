@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { FaDownload } from 'react-icons/fa';
+import { FaDownload, FaRedo, FaSearch } from 'react-icons/fa';
 
 const MutualTransferRequestPending = () => {
     const [showModal, setShowModal] = useState(false);
@@ -19,8 +19,8 @@ const MutualTransferRequestPending = () => {
                 <h2 className="text-xl font-bold mb-4">Filter</h2>
                 <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
                     <div>
-                        <label className="block text-sm font-bold mb-2">Application No <span className="text-red-500">*</span></label>
-                        <input type="text" placeholder="Application No" className="w-full p-2 border rounded" />
+                        <label className="block text-sm font-bold mb-2">District Name<span className="text-red-500">*</span></label>
+                        <input type="text" placeholder="District Name" className="w-full p-2 border rounded" />
                     </div>
                     <div>
                         <label className="block text-sm font-bold mb-2">Designation <span className="text-red-500">*</span></label>
@@ -41,8 +41,8 @@ const MutualTransferRequestPending = () => {
                     </div>
                 </div>
                 <div className="flex justify-end mt-4">
-                    <button className="bg-blue-500 text-white px-4 py-2 rounded mr-2">Search</button>
-                    <button className="bg-red-500 text-white px-4 py-2 rounded">Reset</button>
+                    <button className="bg-blue-500 text-white px-4 py-2 rounded mr-2 flex items-center gap-2"><FaSearch />Search</button>
+                    <button className="bg-red-500 text-white px-4 py-2 rounded flex items-center gap-2"><FaRedo />  Reset</button>
                 </div>
             </div>
 

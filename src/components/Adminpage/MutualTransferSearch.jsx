@@ -14,34 +14,65 @@ const MutualTransferRequestSearch = () => {
     <div className="container mx-auto p-4">
       <div className="bg-white p-4 rounded shadow">
         <h1 className="text-xl font-bold mb-4">MUTUAL TRANSFER - SEARCH</h1>
-        
+
         {/* Filter Section */}
         <div className="bg-gray-200 p-4 rounded mb-4">
-          <h2 className="text-lg font-bold mb-2">Filter</h2>
+          <h2 className="text-xl font-bold mb-4">Filter</h2>
           <div className="flex flex-col sm:flex-row items-center mb-4">
-            <label
-              htmlFor="applicationNo"
-              className="mr-2 font-bold text-red-600"
-            >
-              Application No *
-            </label>
+            <label className="mr-2 font-bold text-gray-800">Employee Code <span className="text-red-500">*</span></label>
             <input
               type="text"
-              id="applicationNo"
               className="border rounded p-2 flex-grow mb-2 sm:mb-0"
-              placeholder="Application No"
-              aria-label="Application Number"
+              placeholder="Enter Employee Code"
             />
-            <button className="bg-blue-500 text-white px-4 py-2 rounded ml-2 flex items-center">
-              <FaSearch className="mr-2" /> Search
-            </button>
-            <button className="bg-red-500 text-white px-4 py-2 rounded ml-2 flex items-center">
-              <FaRedo className="mr-2" /> Reset
-            </button>
           </div>
-          <button className="bg-red-500 text-white px-4 py-2 rounded">
-            <FaRedo className="mr-2" /> Reset Filter
-          </button>
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
+            <div>
+              <label className="block text-sm font-bold mb-2">District <span className="text-red-500">*</span></label>
+              <select className="w-full p-2 border rounded bg-white">
+                <option>Select District</option>
+                <option>District 1</option>
+                <option>District 2</option>
+                <option>District 3</option>
+              </select>
+            </div>
+            <div>
+              <label className="block text-sm font-bold mb-2">Block <span className="text-red-500">*</span></label>
+              <select className="w-full p-2 border rounded bg-white">
+                <option>Select Block</option>
+                <option>Block 1</option>
+                <option>Block 2</option>
+                <option>Block 3</option>
+              </select>
+            </div>
+            <div>
+              <label className="block text-sm font-bold mb-2">GP <span className="text-red-500">*</span></label>
+              <select className="w-full p-2 border rounded bg-white">
+                <option>Select GP</option>
+                <option>GP 1</option>
+                <option>GP 2</option>
+                <option>GP 3</option>
+              </select>
+            </div>
+            <div>
+              <label className="block text-sm font-bold mb-2">Designation <span className="text-red-500">*</span></label>
+              <select className="w-full p-2 border rounded bg-white">
+                <option>Select Designation</option>
+                <option>Designation 1</option>
+                <option>Designation 2</option>
+                <option>Designation 3</option>
+              </select>
+            </div>
+
+          </div>
+          <div className="flex justify-end mt-4">
+            <button className="bg-blue-500 text-white px-4 py-2 rounded mr-2 flex items-center gap-2">
+              <FaSearch />
+              Search</button>
+            <button className="bg-red-500 text-white px-4 py-2 rounded flex items-center gap-2">
+              <FaRedo />
+              Reset</button>
+          </div>
         </div>
 
         {/* Table Section */}
@@ -50,23 +81,21 @@ const MutualTransferRequestSearch = () => {
             <thead>
               <tr>
                 <th className="py-2 px-4 border">SNo</th>
-                <th className="py-2 px-4 border">Application No.</th>
+                <th className="py-2 px-4 border">Employee Code</th>
                 <th className="py-2 px-4 border">District of Employee 1</th>
                 <th className="py-2 px-4 border">District of Employee 2</th>
                 <th className="py-2 px-4 border">Submitted On</th>
                 <th className="py-2 px-4 border">Last Action On</th>
-                <th className="py-2 px-4 border">Action</th>
               </tr>
             </thead>
             <tbody>
               <tr>
                 <td className="py-2 px-4 border-b">1</td>
-                <td className="py-2 px-4 border-b">xyz123</td>
+                <td className="py-2 px-4 border-b text-blue-700 font-semibold">PNRDGP00123</td>
                 <td className="py-2 px-4 border-b">District1</td>
                 <td className="py-2 px-4 border-b">District2</td>
                 <td className="py-2 px-4 border-b">2024-11-04</td>
                 <td className="py-2 px-4 border-b">2024-11-04</td>
-                <td className="py-2 px-4 border-b">View</td>
               </tr>
               {/* More rows as needed */}
             </tbody>
