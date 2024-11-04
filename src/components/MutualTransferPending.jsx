@@ -42,8 +42,8 @@ const MutualTransferRequestPending = () => {
                         <tr className="bg-gray-200 text-gray-600 uppercase text-sm leading-normal">
                             <th className="py-3 px-6 text-left">SNo</th>
                             <th className="py-3 px-6 text-left">Application No.</th>
-                            <th className="py-3 px-6 text-left">District of Teacher 1</th>
-                            <th className="py-3 px-6 text-left">District of Teacher 2</th>
+                            <th className="py-3 px-6 text-left">District of Emplyoee 1</th>
+                            <th className="py-3 px-6 text-left">District of Emplyoee 2</th>
                             <th className="py-3 px-6 text-left">Submitted On</th>
                             <th className="py-3 px-6 text-left">Last Action On</th>
                             <th className="py-3 px-6 text-left">Action</th>
