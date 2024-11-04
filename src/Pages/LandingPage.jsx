@@ -1,6 +1,6 @@
-import ContactUs from "../components/ContactUs"
-import Hero from "../components/Hero"
-import Nav from "../components/Nav"
+import ContactUs from "../components/landingpage/ContactUs"
+import Hero from "../components/landingpage/Hero"
+import Nav from "../components/landingpage/Nav"
 
 function LandingPage() {
   return (

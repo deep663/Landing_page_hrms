@@ -6,6 +6,7 @@ import {
   FaUserClock,
 } from "react-icons/fa";
 import { Chart, ArcElement, Tooltip, Legend } from "chart.js";
+import AssamMapIcon from "../common/AssamMapIcon";
 
 // Register the required components
 Chart.register(ArcElement, Tooltip, Legend);
@@ -47,6 +48,7 @@ const DashBoardMain = () => {
           <ProfileSubmitted />
           <AgeWiseEmployee />
           <GenderWiseEmployee />
+          <AssamMapIcon  fill="#a8b9f4" stroke="black" height="400px" className=""/>
         </div>
       </div>
     </>
@@ -137,6 +139,9 @@ const GenderWiseEmployee = () => {
         <h3 className="text-lg font-semibold mb-4">GENDER WISE EMPLOYEE</h3>
         <select className="border border-gray-300 rounded p-2">
           <option>Select District</option>
+          <option>District 1</option>
+          <option>District 2</option>
+          <option>District 3</option>
         </select>
       </div>
       <div className="flex justify-center">

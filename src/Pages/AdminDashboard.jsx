@@ -1,4 +1,4 @@
-import DashboardSidebar from "../components/DashBoardSideBar";
+import DashboardSidebar from "../components/Adminpage/DashBoardSideBar";
 import { Outlet } from "react-router-dom";
 
 const Dashboard = () => {

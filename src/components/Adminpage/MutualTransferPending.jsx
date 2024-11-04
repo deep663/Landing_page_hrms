@@ -1,6 +1,13 @@
+import { useState } from 'react';
 import { FaDownload } from 'react-icons/fa';
 
 const MutualTransferRequestPending = () => {
+    const [showModal, setShowModal] = useState(false);
+
+    const toggleApprove = () => {
+        setShowModal(!showModal);
+    };
+
     return (
         <div className="container mx-auto bg-white p-6 rounded shadow">
             <div className="mb-4">
@@ -45,8 +52,10 @@ const MutualTransferRequestPending = () => {
                     <thead>
                         <tr className="bg-gray-200 text-gray-600 uppercase text-sm leading-normal">
                             <th className="py-3 px-6 text-left">SNo</th>
-                            <th className="py-3 px-6 text-left">Application No.</th>
+                            <th className="py-3 px-6 text-left">Employee Code 1</th>
+                            <th className="py-3 px-6 text-left">Designation</th>
                             <th className="py-3 px-6 text-left">District of Employee 1</th>
+                            <th className="py-3 px-6 text-left">Employee Code 2</th>
                             <th className="py-3 px-6 text-left">District of Employee 2</th>
                             <th className="py-3 px-6 text-left">Submitted On</th>
                             <th className="py-3 px-6 text-left">Last Action On</th>
@@ -55,15 +64,17 @@ const MutualTransferRequestPending = () => {
                     </thead>
                     <tbody className="text-gray-600 text-sm font-light">
                         {[1, 2, 3, 4, 5].map((index) => (
-                            <tr key={index} className="border-b border-gray-200 hover:bg-gray-100">
+                            <tr key={index} className="border-b font-semibold border-gray-200 hover:bg-gray-100">
                                 <td className="py-3 px-6 text-left">{index}.</td>
-                                <td className="py-3 px-6 text-left">EE/M-03-00000{69 - index}</td>
+                                <td className="py-3 px-6 text-left text-blue-700">PNRDGP001{69 - index}</td>
+                                <td className="py-3 px-6 text-left">Designation {index}</td>
                                 <td className="py-3 px-6 text-left">District {index}</td>
+                                <td className="py-3 px-6 text-left text-blue-700">PNRDGP001{69 - index}</td>
                                 <td className="py-3 px-6 text-left">District {index}</td>
                                 <td className="py-3 px-6 text-left">{new Date().toLocaleDateString()}</td>
                                 <td className="py-3 px-6 text-left">{new Date().toLocaleDateString()}</td>
                                 <td className="py-3 px-6 text-left">
-                                    <button className="bg-yellow-500 text-white px-4 py-2 rounded">View</button>
+                                    <button onClick={toggleApprove} className="bg-yellow-500 text-white px-4 py-2 rounded">View</button>
                                 </td>
                             </tr>
                         ))}
@@ -91,6 +102,56 @@ const MutualTransferRequestPending = () => {
                             <option key={num}>Show {num}</option>
                         ))}
                     </select>
+                </div>
+            </div>
+
+            {/* Modal Section */}
+            {showModal && <ApproveModal toggleApprove={toggleApprove} />}
+        </div>
+    );
+};
+
+const ApproveModal = ({ toggleApprove }) => {
+    return (
+        <div className="bg-black bg-opacity-30 fixed inset-0 h-screen w-full flex items-center justify-center">
+            <div className="bg-white shadow-lg rounded-lg w-1/2">
+                <div className="bg-blue-900 text-white text-lg font-semibold p-4 rounded-t-lg flex justify-between items-center">
+                    <span>Approve Mutual Employee Transfer</span>
+                    <i className="fas fa-times cursor-pointer" onClick={toggleApprove}></i>
+                </div>
+                <div className="p-6">
+                    <div className="flex justify-between items-center mb-4">
+                        <div className="w-1/2 pr-2">
+                            <label className="block text-blue-700 font-semibold mb-2">
+                                Order Document Upload<span className="text-red-500">*</span>
+                            </label>
+                            <input 
+                                type="file" 
+                                className="block w-full text-gray-700 border border-gray-300 rounded py-2 px-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" 
+                            />
+                        </div>
+                        <div className="w-1/2 pl-2">
+                            <label className="block text-blue-700 font-semibold mb-2">
+                                Select Order date<span className="text-red-500">*</span>
+                            </label>
+                            <div className="relative">
+                                <input 
+                                    type="date" 
+                                    placeholder="dd-mm-yyyy" 
+                                    className="block w-full text-gray-700 border border-gray-300 rounded py-2 px-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" 
+                                />
+                                <i className="fas fa-calendar-alt absolute right-3 top-3 text-gray-500"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="flex justify-center space-x-4">
+                        <button className="bg-green-500 text-white font-semibold py-2 px-6 rounded hover:bg-green-600">
+                            SUBMIT
+                        </button>
+                        <button className="bg-red-500 text-white font-semibold py-2 px-6 rounded hover:bg-red-600" onClick={toggleApprove}>
+                            CANCEL
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>

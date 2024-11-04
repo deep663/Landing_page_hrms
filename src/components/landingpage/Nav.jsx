@@ -44,9 +44,15 @@ const Nav = () => {
                 </ul>
 
                 {/* Mobile Menu Icon */}
-                <div className="md:hidden">
+                <div className="md:hidden w-full flex justify-between">
                     <button onClick={toggleMenu} className="text-blue-600">
                         {menuOpen ? <FaTimes size={24} /> : <FaBars size={24} />}
+                    </button>
+                    <button
+                        onClick={toggleModal}
+                        className="text-white border border-green-600 px-6 py-2 rounded-full bg-green-500 transition-colors duration-300"
+                    >
+                        Log In
                     </button>
                 </div>
 
@@ -85,12 +91,12 @@ const Nav = () => {
                             </a>
                         </li>
                     ))}
-                    <button
+                    {/* <button
                         onClick={toggleModal}
                         className="text-white border border-green-600 px-6 py-2 rounded-full bg-green-500 hover:bg-green-600 hover:text-white transition-colors duration-300 mt-4"
                     >
                         Log In
-                    </button>
+                    </button> */}
                 </ul>
             )}
 

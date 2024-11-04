@@ -16,6 +16,7 @@ import {
   FaUserShield,
   FaLock,
 } from "react-icons/fa";
+import { FaRightFromBracket } from "react-icons/fa6";
 import { useNavigate } from "react-router-dom";
 
 const DashboardSidebar = () => {
@@ -41,7 +42,7 @@ const DashboardSidebar = () => {
   };
 
   return (
-    <div className="relative h-screen">
+    <div className="relative min-h-screen">
       {/* Toggle button for smaller screens */}
       <button
         className="md:hidden p-4 text-gray-700 focus:outline-none"
@@ -87,6 +88,15 @@ const DashboardSidebar = () => {
               </span>
             </li>
             {showTransferSubmenu3 && <Submenu3 />}
+            
+            <hr className="h-px my-4 bg-gray-200 border-0 dark:bg-gray-700"/>
+            <li
+              className="flex items-center px-4 py-2 text-red-700 hover:bg-gray-200 cursor-pointer"
+              onClick={() => navigate("/")}
+            >
+              <FaRightFromBracket className="mr-2" />
+              Log Out
+            </li>
           </ul>
         </nav>
       </div>
@@ -123,13 +133,14 @@ const Submenu3 = () => {
           Pending
         </li>
         <li className="flex items-center px-4 py-2 text-gray-700 hover:bg-gray-200">
-          <FaFileInvoice className="mr-2" />
-          Order Generate
-        </li>
-        <li className="flex items-center px-4 py-2 text-gray-700 hover:bg-gray-200">
           <FaHistory className="mr-2" />
           Order History
         </li>
+        {/* <li className="flex items-center px-4 py-2 text-gray-700 hover:bg-gray-200">
+          <FaFileInvoice className="mr-2" />
+          Order Generate
+        </li>
+        
         <li className="flex items-center px-4 py-2 text-gray-700 hover:bg-gray-200">
           <FaTimesCircle className="mr-2" />
           Rejected
@@ -137,7 +148,7 @@ const Submenu3 = () => {
         <li className="flex items-center px-4 py-2 text-gray-700 hover:bg-gray-200">
           <FaSearchPlus className="mr-2" />
           Master Search
-        </li>
+        </li> */}
       </ul>
     </div>
   );

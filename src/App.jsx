@@ -1,12 +1,12 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import LandingPage from "./Pages/LandingPage";
-import Header from "./components/Header";
-import Footer from "./components/Footer";
+import Header from "./components/common/Header";
+import Footer from "./components/common/Footer";
 import NotFoundPage from "./Pages/NotFoundPage";
 import Dashboard from "./Pages/AdminDashboard";
-import DashBoardMain from "./components/DashBoardMain";
-import MutualTransferRequestSearch from "./components/MutualTransferSearch";
-import MutualTransferRequestPending from "./components/MutualTransferPending";
+import DashBoardMain from "./components/Adminpage/DashBoardMain";
+import MutualTransferRequestSearch from "./components/Adminpage/MutualTransferSearch";
+import MutualTransferRequestPending from "./components/Adminpage/MutualTransferPending";
 
 function App() {
   return (
