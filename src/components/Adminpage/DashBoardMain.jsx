@@ -48,7 +48,7 @@ const DashBoardMain = () => {
           <ProfileSubmitted />
           <AgeWiseEmployee />
           <GenderWiseEmployee />
-          <AssamMapIcon  fill="#a8b9f4" stroke="black" height="400px" className=""/>
+          {/* <AssamMapIcon  fill="#a8b9f4" stroke="black" height="400px" className=""/> */}
         </div>
       </div>
     </>
