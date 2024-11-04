@@ -15,14 +15,16 @@ const DashBoardMain = () => {
     <>
       {/* Main Content */}
       <div className="flex-1 p-6">
-        <header className="flex justify-between items-center mb-6">
-          <h2 className="text-2xl font-bold">DASHBOARD</h2>
+        <header className="flex flex-col sm:flex-row justify-between items-center mb-6">
+          <h2 className="text-2xl font-bold mb-4 sm:mb-0">DASHBOARD</h2>
           <div className="flex items-center">
             <span className="mr-2">Hello Admin</span>
             <FaUserCircle className="text-2xl" />
           </div>
         </header>
-        <div className="grid grid-cols-3 gap-6 mb-6">
+
+        {/* Stat Cards */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-6">
           <StatCard
             title="TOTAL EMPLOYEE"
             value="1000"
@@ -34,12 +36,14 @@ const DashBoardMain = () => {
             icon={<FaUserCheck className="text-blue-500 text-4xl" />}
           />
           <StatCard
-            title="TOTAL EMPLOYEE ON HOLD"
+            title="TOTAL VACANCY"
             value="200"
             icon={<FaUserClock className="text-blue-500 text-4xl" />}
           />
         </div>
-        <div className="grid grid-cols-3 gap-6 mb-6">
+
+        {/* Charts and Lists */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-6">
           <ProfileSubmitted />
           <AgeWiseEmployee />
           <GenderWiseEmployee />
@@ -51,10 +55,10 @@ const DashBoardMain = () => {
 
 const StatCard = ({ title, value, icon }) => {
   return (
-    <div className="bg-white p-4 shadow-md border  rounded">
+    <div className="bg-white p-4 shadow-md border rounded text-center">
       <div className="flex flex-col items-center justify-center space-y-4">
         <div>{icon}</div>
-        <div className="text-center">
+        <div>
           <h3 className="text-lg font-semibold">{title}</h3>
           <p className="text-3xl font-bold">{value}</p>
         </div>
@@ -92,21 +96,9 @@ const AgeWiseEmployee = () => {
     datasets: [
       {
         label: "Age Wise Distribution",
-        data: [150, 300, 200, 100, 50], // Adjust these values as needed
-        backgroundColor: [
-          "#36A2EB",
-          "#FF6384",
-          "#FFCE56",
-          "#4BC0C0",
-          "#9966FF",
-        ],
-        hoverBackgroundColor: [
-          "#36A2EB",
-          "#FF6384",
-          "#FFCE56",
-          "#4BC0C0",
-          "#9966FF",
-        ],
+        data: [150, 300, 200, 100, 50],
+        backgroundColor: ["#36A2EB", "#FF6384", "#FFCE56", "#4BC0C0", "#9966FF"],
+        hoverBackgroundColor: ["#36A2EB", "#FF6384", "#FFCE56", "#4BC0C0", "#9966FF"],
       },
     ],
   };
@@ -117,8 +109,9 @@ const AgeWiseEmployee = () => {
       <div className="flex justify-center">
         <Pie
           data={data}
-          width={60}
           options={{ maintainAspectRatio: false, responsive: true }}
+          width={150}
+          height={150}
         />
       </div>
     </div>
@@ -128,15 +121,11 @@ const AgeWiseEmployee = () => {
 const GenderWiseEmployee = () => {
   // Dummy data for the pie chart
   const data = {
-    labels: ["Male", "Female", "Other"], // Gender categories
+    labels: ["Male", "Female", "Other"],
     datasets: [
       {
-        data: [50, 40, 10], // Example data values representing the number of employees
-        backgroundColor: [
-          "#42A5F5", // Blue for Male
-          "#FF6F61", // Pink for Female
-          "#66BB6A", // Green for Other
-        ],
+        data: [50, 40, 10],
+        backgroundColor: ["#42A5F5", "#FF6F61", "#66BB6A"],
         hoverBackgroundColor: ["#42A5F5", "#FF6F61", "#66BB6A"],
       },
     ],
@@ -145,9 +134,7 @@ const GenderWiseEmployee = () => {
   return (
     <div className="bg-white p-4 shadow-md rounded">
       <div className="flex justify-between items-center">
-        <h3 className="text-lg font-semibold mb-4 text-wrap">
-          GENDER WISE EMPLOYEE
-        </h3>
+        <h3 className="text-lg font-semibold mb-4">GENDER WISE EMPLOYEE</h3>
         <select className="border border-gray-300 rounded p-2">
           <option>Select District</option>
         </select>
@@ -156,8 +143,8 @@ const GenderWiseEmployee = () => {
         <Pie
           data={data}
           options={{ maintainAspectRatio: false, responsive: true }}
-          height={150}
           width={150}
+          height={150}
         />
       </div>
     </div>
