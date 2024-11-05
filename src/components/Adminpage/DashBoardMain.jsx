@@ -6,7 +6,6 @@ import {
 } from "react-icons/fa";
 import PropTypes from "prop-types";
 import EmployeeDistribution from "./EmployeeDistribution";
-import DistrictWiseDetails from "./DistrictWiseEmployee";
 
 // Data sets for the charts
 const dataSetEmpDist = {
@@ -68,46 +67,6 @@ const dataSetEmpDist = {
   },
 };
 
-const dataSetDistrict = {
-  "District 1": {
-    "Block 1": {
-      scheme1: 54,
-      scheme2: 23,
-      scheme3: 17,
-      serving: 80,
-      hold: 2,
-      vacant: 6
-    },
-    "Block 2": {
-      scheme1: 30,
-      scheme2: 40,
-      scheme3: 10,
-      serving: 70,
-      hold: 5,
-      vacant: 15
-    }
-  },
-  "District 2": {
-    "Block 3": {
-      scheme1: 60,
-      scheme2: 25,
-      scheme3: 15,
-      serving: 90,
-      hold: 3,
-      vacant: 7
-    },
-    "Block 4": {
-      scheme1: 20,
-      scheme2: 35,
-      scheme3: 25,
-      serving: 60,
-      hold: 10,
-      vacant: 5
-    }
-  }
-};
-
-
 
 const DashBoardMain = () => {
   return (
@@ -129,7 +88,6 @@ const DashBoardMain = () => {
 
       {/* Employee Distribution */}
       <EmployeeDistribution dataSets={dataSetEmpDist} />
-      <DistrictWiseDetails dataSets={dataSetDistrict} />
     </div>
   );
 };
