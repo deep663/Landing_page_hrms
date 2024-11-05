@@ -6,14 +6,14 @@ import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
 
 const Hero = () => {
     const images = [
-        "./slide_image_1.jpg",
-        "./slide_image_2.jpg",
-        "./slide_image_3.jpg",
-        "./slide_image_4.jpg",
+        "./Picture1.jpg",
+        "./Picture2.jpeg",
+        "./Picture3.jpeg",
+       
     ];
 
     const captions = [
-        "Empowering Communities: Farmers harvesting crops under the bright sun.",
+        "Mission Amrit Sarovar: Wage Employment to Sustainable Livelihood.",
         "Sustainable Practices: Introducing eco-friendly farming techniques.",
         "Rural Infrastructure: Building roads to connect remote villages.",
         "Community Health: Providing essential medical services to rural areas.",
@@ -35,7 +35,7 @@ const Hero = () => {
             setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
         }, 5000); // Change image every 5 seconds
 
-        return () => clearInterval(interval); // Cleanup on unmount
+        return () => clearInterval(interval);
     }, [images.length]);
 
     // Navigation functions
@@ -154,7 +154,7 @@ const Hero = () => {
                 <Card title="14th FINANCE COMMISSION" total="6565" inService="5720" imgSrc="./FC.webp" />
                 <Card title="RGSA" total="62" inService="46" imgSrc="./RGSA.jfif" />
                 <Card title="NSAP" total="2" inService="0" imgSrc="./NSAP.png" />
-                <Card title="RURBAN" total="15" inService="8" imgSrc="./RURBAN.jfif" />
+                <Card title="RURBAN" total="15" inService="8" imgSrc="./Rurban.jpg" />
                 <Card title="SOCIAL ASSISTANT" total="12" inService="7" imgSrc="https://storage.googleapis.com/a1aa/image/eklfHD4FgntgkkjInSlgrzfh0rWbZFycr44tgP2cOJEd6ZWnA.jpg" />
             </div>
 

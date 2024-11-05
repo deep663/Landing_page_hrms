@@ -78,10 +78,10 @@ const MutualTransferRequestSearch = () => {
         {/* Table Section */}
         <div className="overflow-x-auto">
           <table className="min-w-full bg-white">
-            <thead>
+            <thead className="bg-gray-100">
               <tr>
                 <th className="py-2 px-4 border">SNo</th>
-                <th className="py-2 px-4 border">Employee Code</th>
+                <th className="py-2 px-4 border">Designation</th>
                 <th className="py-2 px-4 border">District of Employee 1</th>
                 <th className="py-2 px-4 border">District of Employee 2</th>
                 <th className="py-2 px-4 border">Submitted On</th>
@@ -90,14 +90,13 @@ const MutualTransferRequestSearch = () => {
             </thead>
             <tbody>
               <tr>
-                <td className="py-2 px-4 border-b">1</td>
-                <td className="py-2 px-4 border-b text-blue-700 font-semibold">PNRDGP00123</td>
-                <td className="py-2 px-4 border-b">District1</td>
-                <td className="py-2 px-4 border-b">District2</td>
-                <td className="py-2 px-4 border-b">2024-11-04</td>
-                <td className="py-2 px-4 border-b">2024-11-04</td>
+                <td className="py-2 px-4 text-center border">1.</td>
+                <td className="py-2 px-4 text-center border">Designation1</td>
+                <td className="py-2 px-4 text-center border">District1</td>
+                <td className="py-2 px-4 text-center border">District2</td>
+                <td className="py-2 px-4 text-center border">2024-11-04</td>
+                <td className="py-2 px-4 text-center border">2024-11-04</td>
               </tr>
-              {/* More rows as needed */}
             </tbody>
           </table>
         </div>

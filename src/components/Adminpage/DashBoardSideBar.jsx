@@ -53,11 +53,11 @@ const DashboardSidebar = () => {
 
       {/* Sidebar */}
       <div
-        className={`fixed md:static top-0 left-0 w-64 h-full bg-white shadow-md transform ${
+        className={`z-50 fixed md:static top-0 left-0 w-64 min-h-screen bg-white shadow-md transform ${
           isSidebarOpen ? "translate-x-0" : "-translate-x-full"
         } md:translate-x-0 transition-transform duration-300 ease-in-out z-40`}
       >
-        <nav className="mt-6">
+        <nav className="my-6">
           <ul>
             <li
               onClick={() => navigate("/admindashboard")}
