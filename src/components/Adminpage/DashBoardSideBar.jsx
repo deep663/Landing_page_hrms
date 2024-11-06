@@ -20,7 +20,7 @@ import { FaRightFromBracket } from "react-icons/fa6";
 import { useNavigate } from "react-router-dom";
 
 const DashboardSidebar = () => {
-  const [isSidebarOpen, setIsSidebarOpen] = useState(false); // State for sidebar visibility on smaller screens
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const [showTransferSubmenu2, setShowTransferSubmenu2] = useState(false);
   const navigate = useNavigate();
 
