@@ -111,8 +111,8 @@ const DashBoardMain = () => {
       <header className="bg-gray-100 flex justify-between items-center mb-6 p-5">
         <h2 className="text-2xl font-bold mb-4 sm:mb-0">DASHBOARD</h2>
         <div className="flex items-center">
-          <span className="mr-2">Hello Admin</span>
-          <FaUserCircle className="text-2xl" />
+          <span className="mr-2 text-lg font-semibold">Hello, Admin</span>
+          <FaUserCircle className="text-4xl text-blue-500" />
         </div>
       </header>
       <div className="p-6">
@@ -163,7 +163,7 @@ const DashBoardMain = () => {
 
 const StatCard = ({ title, value, icon }) => {
   return (
-    <div className="bg-white p-6 md:p-4 shadow-md border rounded-lg text-center">
+    <div className="bg-white p-6 md:p-4 shadow-md border rounded-lg text-center hover:shadow-lg transition-transform duration-300 ease-in-out">
       <div className="flex flex-col items-center space-y-3 md:space-y-4">
         <div className="text-4xl md:text-5xl bg-blue-500 rounded-full w-16 h-16 flex items-center justify-center">
           {icon}

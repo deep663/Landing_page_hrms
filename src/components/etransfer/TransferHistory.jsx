@@ -36,10 +36,13 @@ const TransferHistory = () => {
     <div className="container mx-auto bg-white">
       <header className="bg-gray-100 flex flex-col justify-center mb-6 px-5 py-2">
         <h2 className="text-2xl font-bold mb-4 sm:mb-0">APPLICATION HISTORY</h2>
+        <h3 className="text-md font-semibold">
+          <span className="text-yellow-500">E-TRANSFER </span> / APPLICATION HISTORY
+        </h3>
       </header>
 
       {/* Table Section */}
-      <div className="overflow-x-auto mx-4 mt-4">
+      {/* <div className="overflow-x-auto mx-4 mt-4">
         <table className="min-w-full bg-white">
           <thead className="bg-gray-100">
             <tr>
@@ -79,7 +82,7 @@ const TransferHistory = () => {
             ))}
           </tbody>
         </table>
-      </div>
+      </div> */}
 
       {/* Details Modal */}
       {showDetailsModal && selectedApplication && (

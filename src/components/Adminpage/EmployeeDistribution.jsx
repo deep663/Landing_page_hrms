@@ -1,4 +1,4 @@
-import { Doughnut, Pie } from "react-chartjs-2";
+import { Pie } from "react-chartjs-2";
 import { Chart, ArcElement, Tooltip, Legend } from "chart.js";
 import { useState } from "react";
 import PropTypes from "prop-types";

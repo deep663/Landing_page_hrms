@@ -11,6 +11,7 @@ import ETransferMain from "./components/etransfer/eTransferMain";
 import TransferApprove from "./components/etransfer/TransferApprove";
 import TransferReject from "./components/etransfer/TransferReject";
 import TransferHistory from "./components/etransfer/TransferHistory";
+import ProfileSettings from "./components/adminpage/ProfileSettings";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
           <Route path="/" element={<LandingPage />} />
           <Route path="/admindashboard" element={<Dashboard />}>
             <Route index element={<DashBoardMain />} />
+            <Route path="/admindashboard/profile" element={<ProfileSettings />} />
           </Route>
           <Route path="/etransfer" element={<ETransfer />} >
             <Route index element={<ETransferMain />} />

@@ -9,7 +9,7 @@ import {
   FaUserShield,
   FaLock,
 } from "react-icons/fa";
-import { FaRightFromBracket } from "react-icons/fa6";
+import { FaRightFromBracket, FaUserGear } from "react-icons/fa6";
 import { useNavigate } from "react-router-dom";
 
 const DashboardSidebar = () => {
@@ -66,6 +66,13 @@ const DashboardSidebar = () => {
             </li>
             {showTransferSubmenu2 && <Submenu2 />}
             <hr className="h-px my-4 bg-gray-200 border-0 dark:bg-gray-700"/>
+            <li
+              className="flex items-center px-4 py-2 text-gray-700 hover:bg-gray-200 cursor-pointer"
+              onClick={() => navigate("/admindashboard/profile")}
+            >
+              <FaUserGear className="mr-2" />
+              Profile Settings
+            </li>
             <li
               className="flex items-center px-4 py-2 text-red-700 hover:bg-gray-200 cursor-pointer"
               onClick={() => navigate("/")}
