@@ -22,7 +22,6 @@ import { useNavigate } from "react-router-dom";
 const DashboardSidebar = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false); // State for sidebar visibility on smaller screens
   const [showTransferSubmenu2, setShowTransferSubmenu2] = useState(false);
-  const [showTransferSubmenu3, setShowTransferSubmenu3] = useState(false);
   const navigate = useNavigate();
 
   const toggleSidebar = () => setIsSidebarOpen(!isSidebarOpen);
@@ -31,10 +30,6 @@ const DashboardSidebar = () => {
     switch (item) {
       case 2:
         setShowTransferSubmenu2(!showTransferSubmenu2);
-        break;
-      case 3:
-        setShowTransferSubmenu3(!showTransferSubmenu3);
-        navigate("/admindashboard/mutualtransfersearch");
         break;
       default:
         break;
@@ -57,7 +52,7 @@ const DashboardSidebar = () => {
           isSidebarOpen ? "translate-x-0" : "-translate-x-full"
         } md:translate-x-0 transition-transform duration-300 ease-in-out z-40`}
       >
-        <nav className="my-6">
+        <nav className="mb-6">
           <ul>
             <li
               onClick={() => navigate("/admindashboard")}
@@ -77,18 +72,6 @@ const DashboardSidebar = () => {
               </span>
             </li>
             {showTransferSubmenu2 && <Submenu2 />}
-            <li
-              className="flex items-center px-4 py-2 text-gray-700 hover:bg-gray-200 cursor-pointer"
-              onClick={() => toggleTransferSubmenu(3)}
-            >
-              <FaExchangeAlt className="mr-2" />
-              Manage Mutual Transfer Request
-              <span className="ml-auto">
-                {showTransferSubmenu3 ? <FaChevronDown /> : <FaChevronRight />}
-              </span>
-            </li>
-            {showTransferSubmenu3 && <Submenu3 />}
-            
             <hr className="h-px my-4 bg-gray-200 border-0 dark:bg-gray-700"/>
             <li
               className="flex items-center px-4 py-2 text-red-700 hover:bg-gray-200 cursor-pointer"
@@ -112,47 +95,6 @@ const DashboardSidebar = () => {
   );
 };
 
-// Submenu components (no changes required for responsiveness)
-const Submenu3 = () => {
-  const navigate = useNavigate();
-  return (
-    <div className="bg-gray-100 p-4">
-      <ul className="ml-6 mt-2">
-        <li
-          onClick={() => navigate("/admindashboard/mutualtransfersearch")}
-          className="flex items-center px-4 py-2 text-gray-700 hover:bg-gray-200 cursor-pointer"
-        >
-          <FaSearch className="mr-2" />
-          Search
-        </li>
-        <li
-          onClick={() => navigate("/admindashboard/mutualtransferpending")}
-          className="flex items-center px-4 py-2 text-gray-700 hover:bg-gray-200 cursor-pointer"
-        >
-          <FaHourglassHalf className="mr-2" />
-          Pending
-        </li>
-        <li className="flex items-center px-4 py-2 text-gray-700 hover:bg-gray-200">
-          <FaHistory className="mr-2" />
-          Order History
-        </li>
-        {/* <li className="flex items-center px-4 py-2 text-gray-700 hover:bg-gray-200">
-          <FaFileInvoice className="mr-2" />
-          Order Generate
-        </li>
-        
-        <li className="flex items-center px-4 py-2 text-gray-700 hover:bg-gray-200">
-          <FaTimesCircle className="mr-2" />
-          Rejected
-        </li>
-        <li className="flex items-center px-4 py-2 text-gray-700 hover:bg-gray-200">
-          <FaSearchPlus className="mr-2" />
-          Master Search
-        </li> */}
-      </ul>
-    </div>
-  );
-};
 
 const Submenu2 = () => {
   return (

@@ -1,13 +1,16 @@
-import DashboardSidebar from "../components/Adminpage/DashBoardSideBar";
+import DashboardSidebar from "../components/adminpage/DashBoardSideBar";
 import { Outlet } from "react-router-dom";
+import Header from "../components/common/Header";
 
 const Dashboard = () => {
   return (
-    <div className="flex">
-      {/* Sidebar */}
-      <DashboardSidebar />
-      <Outlet />
-    </div>
+    <>
+      <Header />
+      <div className="flex">
+        <DashboardSidebar />
+        <Outlet />
+      </div>
+    </>
   );
 };
 

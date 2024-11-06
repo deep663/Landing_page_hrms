@@ -16,7 +16,7 @@ const NotFoundPage = () => {
           onClick={() => window.history.back()}
           className="mt-6 px-6 py-2 rounded bg-blue-500 hover:bg-blue-700 text-gray-100 font-medium tracking-wide"
         >
-          Return to Base
+          Return to Previous Page
         </button>
       </div>
     </div>

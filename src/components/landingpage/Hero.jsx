@@ -9,13 +9,15 @@ const Hero = () => {
         "./Picture1.jpg",
         "./Picture2.jpeg",
         "./Picture3.jpeg",
+        "./Picture5.jpg",
+        "./Picture6.jpg",
        
     ];
 
     const captions = [
         "Mission Amrit Sarovar: Wage Employment to Sustainable Livelihood.",
-        "Sustainable Practices: Introducing eco-friendly farming techniques.",
         "Rural Infrastructure: Building roads to connect remote villages.",
+        "Sustainable Practices: Introducing eco-friendly farming techniques.",
         "Community Health: Providing essential medical services to rural areas.",
     ];
 
@@ -149,13 +151,13 @@ const Hero = () => {
 
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
-                <Card title="MGNREGA" total="6565" inService="5720" imgSrc="./MGNREGA.webp" />
-                <Card title="PMAYG" total="370" inService="240" imgSrc="./pmay-g-logo.png" />
-                <Card title="14th FINANCE COMMISSION" total="6565" inService="5720" imgSrc="./FC.webp" />
-                <Card title="RGSA" total="62" inService="46" imgSrc="./RGSA.jfif" />
-                <Card title="NSAP" total="2" inService="0" imgSrc="./NSAP.png" />
-                <Card title="RURBAN" total="15" inService="8" imgSrc="./Rurban.jpg" />
-                <Card title="SOCIAL ASSISTANT" total="12" inService="7" imgSrc="https://storage.googleapis.com/a1aa/image/eklfHD4FgntgkkjInSlgrzfh0rWbZFycr44tgP2cOJEd6ZWnA.jpg" />
+                <Card title="MGNREGA" total="6565" imgSrc="./MGNREGA.webp" />
+                <Card title="PMAYG" total="370" imgSrc="./pmay-g-logo.png" />
+                <Card title="14th FINANCE COMMISSION" total="6565"  imgSrc="./FC.webp" />
+                <Card title="RGSA" total="62" imgSrc="./RGSA.jfif" />
+                <Card title="NSAP" total="2"  imgSrc="./NSAP.png" />
+                <Card title="RURBAN" total="15"  imgSrc="./Rurban.jpg" />
+                <Card title="CFP" total="12"  imgSrc="./CFP.jpg"/>
             </div>
 
 

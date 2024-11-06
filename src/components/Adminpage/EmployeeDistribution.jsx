@@ -1,4 +1,4 @@
-import { Pie } from "react-chartjs-2";
+import { Doughnut, Pie } from "react-chartjs-2";
 import { Chart, ArcElement, Tooltip, Legend } from "chart.js";
 import { useState } from "react";
 import PropTypes from "prop-types";
@@ -16,14 +16,14 @@ const EmployeeDistribution = ({ dataSets }) => {
   const data = dataSets[filter];
 
   return (
-    <div className="bg-white text-black font-sans border shadow-md rounded-sm mb-8 p-4">
+    <div className="bg-white text-black border shadow-md mb-6">
       <div className="container mx-auto">
         <div className="bg-gray-200 p-4 flex flex-col sm:flex-row justify-between items-center">
           <h1 className="text-lg font-bold mb-4 sm:mb-0">EMPLOYEE DISTRIBUTION</h1>
           <select
             onChange={handleFilterChange}
             value={filter}
-            className="p-2 border border-gray-300 rounded"
+            className="bg-white p-2 border border-gray-300 rounded"
           >
             <option value="scheme">Schemes</option>
             <option value="designation">Designation</option>
