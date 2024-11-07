@@ -20,7 +20,7 @@ const TransferApproved = () => {
       {/* Filter Section */}
       {/* Use a similar filter section as in the pending component, if needed */}
 
-      {/* Table Section
+      {/* Table Section */}
       <div className="overflow-x-auto mx-4 mt-4">
         <table className="min-w-full bg-white">
           <thead className="bg-gray-100">
@@ -52,7 +52,7 @@ const TransferApproved = () => {
             </tr>
           </tbody>
         </table>
-      </div> */}
+      </div>
 
       {/* Details Modal */}
       {showDetailsModal && <DetailsModal toggleDetails={toggleDetails} />}

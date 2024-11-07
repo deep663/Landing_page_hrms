@@ -42,7 +42,7 @@ const TransferHistory = () => {
       </header>
 
       {/* Table Section */}
-      {/* <div className="overflow-x-auto mx-4 mt-4">
+      <div className="overflow-x-auto mx-4 mt-4">
         <table className="min-w-full bg-white">
           <thead className="bg-gray-100">
             <tr>
@@ -82,7 +82,7 @@ const TransferHistory = () => {
             ))}
           </tbody>
         </table>
-      </div> */}
+      </div>
 
       {/* Details Modal */}
       {showDetailsModal && selectedApplication && (
