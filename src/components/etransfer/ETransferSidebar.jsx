@@ -58,8 +58,8 @@ import {
             <li
               key={item.label}
               onClick={() => navigate(item.path)}
-              className={`flex items-center px-4 py-2 text-gray-700 font-semibold hover:bg-gray-300 cursor-pointer ${
-                location.pathname === item.path ? "bg-blue-600 text-white border-l-4 border-red-500" : ""
+              className={`flex items-center px-4 py-2 text-gray-700 font-semibold cursor-pointer ${
+                location.pathname === item.path ? "bg-blue-600 text-white border-l-4 border-red-500 hover:bg-blue-600" : "hover:bg-gray-300"
               }`}
               tabIndex={0}
               aria-label={item.label}

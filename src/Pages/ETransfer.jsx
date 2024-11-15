@@ -27,7 +27,11 @@ function ETransfer() {
             </p>
           </div>
         </div>
-        <div className="flex items-center space-x-2">
+        <div
+          onClick={() => {
+            navigate("/admindashboard/profile");
+          }}
+         className="flex items-center space-x-2">
            <h1 className="text-xl font-semibold">Hello, Admin</h1> 
           <FaUserCircle className="text-4xl text-blue-500" />
         </div>

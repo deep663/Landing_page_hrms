@@ -9,6 +9,7 @@ import {
   Legend,
 } from "chart.js";
 import TransferHistory from "./TransferHistory";
+import { useNavigate } from "react-router-dom";
 
 ChartJS.register(
   CategoryScale,
@@ -20,12 +21,13 @@ ChartJS.register(
 );
 
 const Dashboard = () => {
+  const navigate = useNavigate();
   // Dummy stats data for summary cards
   const stats = [
-    { title: "Total Applications", value: 150, color: "bg-blue-500" },
-    { title: "Approved Applications", value: 90, color: "bg-green-500" },
-    { title: "Rejected Applications", value: 40, color: "bg-red-500" },
-    { title: "Pending Applications", value: 20, color: "bg-yellow-500" },
+    { title: "Total Applications", value: 150, color: "bg-blue-500", link: "/" },
+    { title: "Approved Applications", value: 90, color: "bg-green-500", link: "/approved" },
+    { title: "Rejected Applications", value: 40, color: "bg-red-500", link: "/rejected" },
+    { title: "Pending Applications", value: 20, color: "bg-yellow-500", link: "/pending" },
   ];
 
   // Data for the bar chart
@@ -59,7 +61,9 @@ const Dashboard = () => {
     <div className="container mx-auto p-6">
       <header className="mb-8">
         <h1 className="text-3xl font-bold">Dashboard</h1>
-        <p className="text-gray-600">Overview of application statuses</p>
+        <h3 className="text-md font-semibold">
+          <span className="text-yellow-500">E-TRANSFER </span> / DASHBOARD
+        </h3>
       </header>
 
       {/* Summary Cards */}
@@ -67,7 +71,8 @@ const Dashboard = () => {
         {stats.map((stat, index) => (
           <div
             key={index}
-            className={`p-6 rounded-lg shadow-lg text-white ${stat.color}`}
+            className={`p-6 rounded-lg shadow-lg text-white ${stat.color} hover:shadow-lg hover:scale-105 hover:border-blue-500 transition-transform duration-300 ease-in-out`}
+            onClick={() => navigate(`/etransfer${stat.link}`)}
           >
             <h2 className="text-lg font-semibold">{stat.title}</h2>
             <p className="text-2xl font-bold">{stat.value}</p>

@@ -45,7 +45,7 @@ const DashboardSidebar = () => {
           isSidebarOpen ? "translate-x-0" : "-translate-x-full"
         } md:translate-x-0 transition-transform duration-300 ease-in-out z-40`}
       >
-        <nav className="mb-6">
+        <nav className="mb-6 mt-8">
           <ul>
             <li
               onClick={() => navigate("/admindashboard")}

@@ -12,6 +12,10 @@ import TransferApprove from "./components/etransfer/TransferApprove";
 import TransferReject from "./components/etransfer/TransferReject";
 import TransferHistory from "./components/etransfer/TransferHistory";
 import ProfileSettings from "./components/adminpage/ProfileSettings";
+import EmployeeDashboard from "./Pages/EmployeeDashboard";
+import EmpDashboard from "./components/employeepage/EmpDashboard";
+import EmployeeProfile from "./components/employeepage/EmployeeProfile";
+import MutualTransfer from "./components/employeepage/MutualTransfer";
 
 function App() {
   return (
@@ -30,6 +34,11 @@ function App() {
             <Route path="/etransfer/approved" element={<TransferApprove />} />
             <Route path="/etransfer/rejected" element={<TransferReject />} />
             <Route path="/etransfer/history" element={<TransferHistory />} />
+          </Route>
+          <Route path="/employeedashboard" element={<EmployeeDashboard/>}>
+            <Route index element={<EmpDashboard />} />
+            <Route path="/employeedashboard/profile" element={<EmployeeProfile />} />
+            <Route path="/employeedashboard/mutualtransfer" element={<MutualTransfer />} />
           </Route>
           <Route path="*" element={<NotFoundPage />} />
         </Routes>
